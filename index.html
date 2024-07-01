@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Frontend Mentor | Contact form</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 14px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="success-container">
+        <div class="inline-container">
+          <img
+            src="./assets/images/icon-success-check.svg"
+            alt="succes check"
+          />Message Sent!
+        </div>
+        <span>Thanks for completing the form. We'll be in touch soon!</span>
+      </div>
+      <div class="main-container">
+        <div class="inner-container">
+          <form>
+            <h2>Contact Us</h2>
+            <div class="format-container">
+              <div class="name-container">
+                <label for="first-name">First Name <span>*</span> </label>
+                <div class="input-box"><input type="text" id="box" /></div>
+                <span class="error-state first-name"></span>
+              </div>
+              <div class="name-container">
+                <label for="last-name">Last Name <span>*</span> </label>
+
+                <div class="input-box"><input type="text" id="box" /></div>
+                <span class="error-state last-name"></span>
+              </div>
+            </div>
+
+            <div class="email-container">
+              <label for="email-address">Email Address <span>*</span></label>
+              <div class="input-box"><input type="email" id="box" /></div>
+            </div>
+            <div class="email-state">
+              <span class="error-state"
+                >Please enter a valid Email address</span
+              >
+            </div>
+
+            <label for="query-type">Query type <span>*</span> </label>
+            <div class="query-container">
+              <div class="input-box box-change">
+                <input type="radio" name="query" id="box" /><label
+                  >General Enquiry</label
+                >
+              </div>
+              <div class="input-box box-change">
+                <input type="radio" name="query" id="box" /><label
+                  >Support Request</label
+                >
+              </div>
+            </div>
+            <div class="query-state">
+              <span class="error-state">Please select a query type</span>
+            </div>
+            <label for="message">Message <span>*</span></label>
+            <div class="text-area-container">
+              <div class="input-box">
+                <textarea name="query" cols="30" rows="10" id="box"></textarea>
+              </div>
+            </div>
+            <div class="message-state">
+              <span class="error-state">This field is required</span>
+            </div>
+            <div class="consent-box">
+              <label for="checkbox"
+                ><input type="checkbox" id="box" />I consent to being contacted
+                  by the team <span>*</span></label
+              >
+            </div>
+            <div class="consent-state">
+              <span class="error-state"
+                >To submit this form, please consent to being contacted</span
+              >
+            </div>
+
+            <button type="submit" id="submitButton">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+      Coded by <a href="#">Master-Francis</a>.
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>

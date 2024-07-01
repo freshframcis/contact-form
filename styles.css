@@ -1,0 +1,242 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: hsl(148, 38%, 91%);
+  font-size: 16px;
+  font-family: "Karla", sans-serif;
+  font-weight: 400;
+}
+
+.main-container {
+  border: 2px solid white;
+  margin: 75px auto 25px;
+  width: 550px;
+  border-radius: 10px;
+  padding: 1.5em;
+  background-color: white;
+}
+.inner-container span {
+  margin-left: 4px;
+}
+
+.inner-container h2 {
+  padding: 10px 0 35px 0;
+  color: hsl(187, 24%, 22%);
+  font-weight: 700;
+}
+
+.name-container {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+  padding-bottom: 10px;
+}
+
+.format-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  width: 100%;
+}
+.format-container .input-box {
+  width: 245px;
+}
+
+.input-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.inner-container input[type="text"],
+input[type="email"] {
+  border-radius: 6px;
+  border: 1px solid;
+  height: 100%;
+  width: 100%;
+  padding: 10px;
+}
+.input-box {
+  height: 40px;
+  width: 49%;
+  border-radius: 8px;
+  margin: 10px 0;
+}
+.email-container {
+  margin-top: 15px;
+}
+.email-container .input-box {
+  width: 100%;
+  margin: 15px 0 15px;
+}
+.query-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 10px 0 8px;
+}
+.query-container .input-box {
+  height: 40px;
+  width: 49%;
+  border: 1px solid;
+  border-radius: 8px;
+  margin: 10px 0;
+}
+
+.query-container input[type="radio"] {
+  margin: 12px 10px 0 20px;
+  height: 12px;
+  transform: scale(1.5);
+}
+
+span {
+  color: hsl(169, 82%, 27%);
+  font-weight: 700;
+}
+.text-area-container {
+  margin-top: 10px;
+}
+textarea {
+  resize: none;
+}
+.text-area-container .input-box {
+  width: 100%;
+  height: 100px;
+  margin-bottom: 20px;
+}
+.text-area-container textarea {
+  height: 100%;
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid;
+  padding: 10px;
+}
+.text-area-container textarea:hover {
+  cursor: pointer;
+  border: 2px solid hsl(169, 82%, 27%);
+}
+.consent-box {
+  display: flex;
+}
+.consent-box input {
+  transform: scale(1.5);
+  margin: 0 20px 15px 8px;
+}
+button {
+  width: 100%;
+  height: 45px;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  background-color: hsl(169, 82%, 27%);
+  color: hsl(148, 38%, 91%);
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+button:hover {
+  cursor: pointer;
+  background-color: hsl(169, 83%, 20%);
+}
+.success-container {
+  width: 470px;
+  height: 100px;
+  background-color: hsl(187, 24%, 22%);
+  border-radius: 8px;
+  margin-inline: auto;
+  position: relative;
+  top: 100px;
+  color: white;
+  padding: 20px;
+  animation-name: fadeOut;
+  animation-duration: 5s;
+  animation-fill-mode: forwards;
+  display: none;
+}
+.success-container img {
+  max-height: 20px;
+  margin-right: 10px;
+}
+.success-container span {
+  display: block;
+  color: hsl(186, 15%, 59%);
+  margin-top: 10px;
+}
+.inline-container {
+  max-width: 250px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.email-state,
+.query-state {
+  margin-bottom: 15px;
+}
+
+.message-state {
+  margin-bottom: 20px;
+}
+.consent-state {
+  margin-bottom: 20px;
+  margin-left: 3px;
+}
+.error-state {
+  color: #d91818a5;
+  display: none;
+}
+.input-box input:hover {
+  cursor: pointer;
+  border: 2px solid hsl(169, 82%, 27%);
+}
+@keyframes fadeOut {
+  0%,
+  25%,
+  50%,
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .main-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+    height: fit-content;
+    font-size: 0.75rem;
+  }
+
+  .query-container .input-box {
+    width: 100%;
+  }
+  .format-container {
+    display: flex;
+    flex-flow: column wrap;
+    width: 100%;
+  }
+  .format-container .input-box {
+    width: 350px;
+  }
+  .text-area-container .input-box {
+    width: 100%;
+    height: 150px;
+    margin-bottom: 20px;
+  }
+  .success-container {
+    width: 95%;
+    font-size: 0.75rem;
+  }
+  .success-container img {
+    height: 15px;
+  }
+
+  .consent-box input {
+    max-width: 15px;
+    margin: 0 10px 10px 8px;
+  }
+}
